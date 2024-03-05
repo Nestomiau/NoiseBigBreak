@@ -20,7 +20,7 @@ switch state
 		if player.image_index >= player.image_number - 1
 		{
 			player.mach2 = 50;
-			player.movespeed = 16;
+			player.movespeed = force;
 			player.state = states.normal;
 			state = 3;
 		}

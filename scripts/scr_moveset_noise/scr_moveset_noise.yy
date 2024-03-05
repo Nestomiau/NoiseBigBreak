@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_moveset_noise",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_moveset_noise",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

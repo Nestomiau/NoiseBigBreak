@@ -1,0 +1,25 @@
+{
+  "FolderOrderSettings":[
+    {"name":"TV","order":2,"path":"folders/Sprites/TV.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"obj_noisette_point","order":5,"path":"objects/obj_noisette_point/obj_noisette_point.yy",},
+    {"name":"scr_startup","order":1,"path":"scripts/scr_startup/scr_startup.yy",},
+    {"name":"obj_particlesystem","order":1,"path":"objects/obj_particlesystem/obj_particlesystem.yy",},
+    {"name":"scr_utilities","order":2,"path":"scripts/scr_utilities/scr_utilities.yy",},
+    {"name":"scr_solid","order":3,"path":"scripts/scr_solid/scr_solid.yy",},
+    {"name":"scr_collide","order":4,"path":"scripts/scr_collide/scr_collide.yy",},
+    {"name":"scr_moveset_noise","order":8,"path":"scripts/scr_moveset_noise/scr_moveset_noise.yy",},
+    {"name":"obj_noisette","order":2,"path":"objects/obj_noisette/obj_noisette.yy",},
+    {"name":"scr_sSupreme","order":7,"path":"scripts/scr_sSupreme/scr_sSupreme.yy",},
+    {"name":"obj_dresser","order":6,"path":"objects/obj_dresser/obj_dresser.yy",},
+    {"name":"obj_camera","order":3,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"shd_sSupreme","order":1,"path":"shaders/shd_sSupreme/shd_sSupreme.yy",},
+    {"name":"spr_dresser","order":1,"path":"sprites/spr_dresser/spr_dresser.yy",},
+    {"name":"obj_screensizer","order":4,"path":"objects/obj_screensizer/obj_screensizer.yy",},
+    {"name":"spr_expr_mach3","order":1,"path":"sprites/spr_expr_mach3/spr_expr_mach3.yy",},
+    {"name":"scr_particle","order":5,"path":"scripts/scr_particle/scr_particle.yy",},
+    {"name":"spr_expr_hurt","order":3,"path":"sprites/spr_expr_hurt/spr_expr_hurt.yy",},
+    {"name":"spr_expr_idle","order":2,"path":"sprites/spr_expr_idle/spr_expr_idle.yy",},
+  ],
+}

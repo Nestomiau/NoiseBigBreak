@@ -1,6 +1,9 @@
-if ++global.collect >= 20
+global.collect+=value
+if (global.collect)mod(20) == 0
 {
-	global.collect = 0;
-	other.hp++;
+	if(other.hp < 5) {
+		other.hp++;
+		other.getLife = 180
+	}
 }
 instance_destroy();
