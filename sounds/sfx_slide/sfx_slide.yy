@@ -12,8 +12,8 @@
   "duration":1.284376,
   "name":"sfx_slide",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Player",
+    "path":"folders/Sounds/SFX/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

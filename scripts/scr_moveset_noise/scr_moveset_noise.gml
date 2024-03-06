@@ -376,8 +376,8 @@ function scr_noise_hurt() {
 
 function scr_noise_dresser() {
 	switch(dresserMenu) {
-	case 0 :
-		if(abs(move)) {
+	case 0 : //Change Current Palette
+		if(abs(move)) { 
 			if(-key_left2){
 				if(is_string(curentPalette)) {
 					if(curentPalette != "c1")
@@ -402,16 +402,38 @@ function scr_noise_dresser() {
 			global.dressing = 0
 		}
 	break
-	default :
-		
+	default : // Change Current Color Value
+		if(abs(move)) {
+			if(-key_left2 && customizing){
+				customizing--
+			}
+			if(key_right2 && customizing < 3){
+				customizing++
+			}
+		}
 	break
 	}
-	if(abs(upmove)){
-		if(key_up2 && dresserMenu){
-			dresserMenu--
-		}if(key_down2 && is_string(curentPalette)) {
-			if(dresserMenu < array_length(customPalettes[real(string_digits(curentPalette))-1])/2)
-				dresserMenu++
+	switch (customizing) {
+	case 0 : // Change Current Color
+		if(abs(upmove)){
+			if(key_up2 && dresserMenu){
+				dresserMenu--
+			}if(key_down2 && is_string(curentPalette)) {
+				if(dresserMenu < array_length(customPalettes[real(string_digits(curentPalette))-1])/2)
+					dresserMenu++
+			}
 		}
+	break
+	default : // Change Color Value
+		if(abs(upmove)){
+			var _cA = customPalettes[string_digits(curentPalette)-1][dresserMenu*2-1]
+			if(key_up && _cA[customizing-1] < 255){
+				_cA[customizing-1]++
+			}if(key_down && _cA[customizing-1] > 0) {
+				_cA[customizing-1]--
+				
+			}
+		}
+	break
 	}
 }

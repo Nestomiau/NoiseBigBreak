@@ -34,7 +34,7 @@ jumpstop = false;
 inv = 0;
 getLife = 0
 dresserMenu = 0
-customizing = 1
+customizing = 0
 
 input_buffer_jump = 0;
 
@@ -152,12 +152,18 @@ charSPR = function(_char) {
 				[1,[232,80,152],2,[168,40,96],4,[224,48,0],5,[129,15,61],6,[88,0,184],7,[224,48,0]], //Pinkish Red
 				[1,[248,112,24],2,[160,56,0],7,[248,224,128]], //Mooney				
 			]
-			customPalettes = array_create(3,[0,[0,0,0],1,[255,255,255],2,[128,128,128],3,[255,255,255],4,[255,170,131],5,[169,56,0],6,[248,0,0],7,[98,98,98]])
+			customPalettes = []
+			var _i = 0
+			repeat(3){
+				customPalettes[_i] = [0,[0,0,0],1,[255,255,255],2,[128,128,128],3,[255,255,255],4,[255,170,131],5,[169,56,0],6,[248,0,0],7,[98,98,98]]
+				_i++
+			}
 			inverted = 0
+			chanCol = 0
 			
 			//STATES
 			var _funcName = "noise"
-			var _i = 0
+			_i = 0
 			var _name = ["normal","jump","wallslide","slide","hurt"]
 			repeat(array_length(_name)) {
 				variable_instance_set(id,$"state_{_name[_i]}",asset_get_index($"scr_{_funcName}_{_name[_i]}"))

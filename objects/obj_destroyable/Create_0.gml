@@ -5,3 +5,4 @@ isMetal = 0
 fallDestroy = 0
 dStruct = {}
 contain = []
+playSfx = noone

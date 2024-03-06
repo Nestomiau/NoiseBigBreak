@@ -6,5 +6,5 @@ if(key_up2 && state != states.dresser){
 	sprite_index = spr_idle
 	movespeed = 0
 	dresserMenu = 0
-	customizing = 1
+	customizing = 0
 }

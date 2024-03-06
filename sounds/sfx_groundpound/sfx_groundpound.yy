@@ -12,8 +12,8 @@
   "duration":0.617528,
   "name":"sfx_groundpound",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Player",
+    "path":"folders/Sounds/SFX/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

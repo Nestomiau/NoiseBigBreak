@@ -35,8 +35,8 @@
     "path":"sprites/spr_dashpad/spr_dashpad.yy",
   },
   "spriteMaskId":{
-    "name":"spr_player_mask",
-    "path":"sprites/spr_player_mask/spr_player_mask.yy",
+    "name":"spr_player_maskdown",
+    "path":"sprites/spr_player_maskdown/spr_player_maskdown.yy",
   },
   "visible":true,
 }

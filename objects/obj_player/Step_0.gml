@@ -113,4 +113,9 @@ if mouse_check_button_pressed(mb_left)
 	y = mouse_y;
 }
 
+if(state == states.slide && sprite_index != spr_dive)
+	mask_index = spr_player_maskdown
+else
+	mask_index = spr_player_mask
+
 getLife--

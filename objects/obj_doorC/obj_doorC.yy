@@ -5,7 +5,7 @@
   "managed":true,
   "name":"obj_doorC",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_doorX","path":"objects/obj_doorX/obj_doorX.yy",},"propertyId":{"name":"door","path":"objects/obj_doorX/obj_doorX.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"B",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_doorX","path":"objects/obj_doorX/obj_doorX.yy",},"propertyId":{"name":"door","path":"objects/obj_doorX/obj_doorX.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"C",},
   ],
   "parent":{
     "name":"door",
@@ -37,5 +37,5 @@
     "path":"sprites/spr_doorC/spr_doorC.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
