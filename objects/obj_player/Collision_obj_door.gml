@@ -1,6 +1,6 @@
 live_auto_call
 
-if(key_up2 && grounded && state != states.slide && state != states.dresser && !other.type && state != states.dead && state != states.hurt){
+if(key_up2 && grounded && state != states.slide && state != states.dresser && state != states.actor && !other.type && state != states.dead && state != states.hurt){
 	targetRoom = other.targetRoom;
 	targetDoor = other.targetDoor;
 	vsp = 0

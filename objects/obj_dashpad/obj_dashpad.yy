@@ -9,8 +9,8 @@
   "name":"obj_dashpad",
   "overriddenProperties":[],
   "parent":{
-    "name":"level structure",
-    "path":"folders/Objects/level structure.yy",
+    "name":"Level Desing",
+    "path":"folders/Objects/Level Desing.yy",
   },
   "parentObjectId":null,
   "persistent":false,

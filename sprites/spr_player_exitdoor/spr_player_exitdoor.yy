@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"player",
-    "path":"folders/Sprites/player.yy",
+    "name":"Noise",
+    "path":"folders/Sprites/Player/Noise.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

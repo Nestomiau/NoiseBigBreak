@@ -1,4 +1,4 @@
-live_auto_call;
+live_auto_call
 
 if(global.dressing) { // Dressing HUD
 
@@ -7,7 +7,7 @@ var _i = 0
 var _array = []
 var _crt = (!(is_string(curentPalette)))?paletteList[curentPalette]:customPalettes[real(string_digits(curentPalette))-1]
 var _t
-repeat(array_length(OgColors)){
+repeat(array_length(OgColors)){ // Get Palette
 	if(array_get_index(_crt,_i) > -1){
 		var _rI = array_length(_array)
 		var _iT = array_get_index(_crt,_i)+1
@@ -23,7 +23,7 @@ scr_sSupreme_set(1,inverted,_array)
 draw_sprite_ext(sprite_index,image_index,SCREEN_WIDTH/2,SCREEN_HEIGHT/2,5,5,0,c_white,1);
 scr_sSupreme_reset()
 
-if(is_string(curentPalette)){
+if(is_string(curentPalette)){ // Display Custom Colors
 	if(dresserMenu > 0) {
 		var _crd = [250,150,100,50]
 		var _c_C = customPalettes[real(string_digits(curentPalette))-1][dresserMenu*2-1]

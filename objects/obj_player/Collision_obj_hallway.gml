@@ -5,7 +5,6 @@ if(state == states.dresser || state == states.dead)
 
 targetRoom = other.targetRoom;
 targetDoor = other.targetDoor;
-
 x = lerp(other.bbox_left, other.bbox_right, 0.5);
 
 if !instance_exists(obj_fadeout)

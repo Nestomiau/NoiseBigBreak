@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"debug",
-    "path":"folders/Sprites/debug.yy",
+    "name":"Solids",
+    "path":"folders/Sprites/Level Desing/Solids.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

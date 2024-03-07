@@ -8,8 +8,8 @@
   "name":"obj_noisette_bounce",
   "overriddenProperties":[],
   "parent":{
-    "name":"noisette",
-    "path":"folders/Objects/level structure/noisette.yy",
+    "name":"Noisette",
+    "path":"folders/Objects/Level Desing/Noisette.yy",
   },
   "parentObjectId":{
     "name":"obj_noisette_point",

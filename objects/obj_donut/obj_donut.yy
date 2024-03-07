@@ -9,8 +9,8 @@
   "name":"obj_donut",
   "overriddenProperties":[],
   "parent":{
-    "name":"level structure",
-    "path":"folders/Objects/level structure.yy",
+    "name":"Collision",
+    "path":"folders/Objects/Level Desing/Collision.yy",
   },
   "parentObjectId":null,
   "persistent":false,

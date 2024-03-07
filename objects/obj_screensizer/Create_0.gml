@@ -12,3 +12,5 @@ mouse_yprevious = mouse_y;
 captionalpha = 0;
 disappearbuffer = 0;
 depth = -9999;
+isABrowser = 0
+

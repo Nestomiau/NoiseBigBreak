@@ -6,8 +6,8 @@
   "name":"obj_doorX",
   "overriddenProperties":[],
   "parent":{
-    "name":"door",
-    "path":"folders/Objects/level structure/door.yy",
+    "name":"Doors",
+    "path":"folders/Objects/Level Desing/Doors.yy",
   },
   "parentObjectId":null,
   "persistent":false,

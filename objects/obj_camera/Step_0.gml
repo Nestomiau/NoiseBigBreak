@@ -21,7 +21,7 @@ if instance_exists(plr)
 
 	camera_set_view_pos(view_camera[0], camx, camy);
 	
-	if(plr.y > camy+camera_get_view_border_y(view_camera[0])/2)
+	if(plr.y > room_height)
 		plr.ofScreen =1
 	else
 		plr.ofScreen =0

@@ -1,10 +1,10 @@
-live_auto_call;
+live_auto_call
 
 var _i = 0
 var _array = []
 var _crt = (!(is_string(curentPalette)))?paletteList[curentPalette]:customPalettes[real(string_digits(curentPalette))-1]
 var _t
-repeat(array_length(OgColors)){
+repeat(array_length(OgColors)){ // Get Colors
 	if(array_get_index(_crt,_i) > -1){
 		var _rI = array_length(_array)
 		var _iT = array_get_index(_crt,_i)+1

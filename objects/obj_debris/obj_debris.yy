@@ -10,8 +10,8 @@
   "name":"obj_debris",
   "overriddenProperties":[],
   "parent":{
-    "name":"effects",
-    "path":"folders/Objects/effects.yy",
+    "name":"Effects",
+    "path":"folders/Objects/Effects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

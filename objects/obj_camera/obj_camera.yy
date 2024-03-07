@@ -13,8 +13,8 @@
   "name":"obj_camera",
   "overriddenProperties":[],
   "parent":{
-    "name":"internal",
-    "path":"folders/Objects/internal.yy",
+    "name":"Internal",
+    "path":"folders/Objects/Internal.yy",
   },
   "parentObjectId":null,
   "persistent":true,

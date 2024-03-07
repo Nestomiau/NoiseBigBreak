@@ -10,8 +10,8 @@
   "name":"obj_fadeout",
   "overriddenProperties":[],
   "parent":{
-    "name":"effects",
-    "path":"folders/Objects/effects.yy",
+    "name":"Effects",
+    "path":"folders/Objects/Effects.yy",
   },
   "parentObjectId":null,
   "persistent":true,

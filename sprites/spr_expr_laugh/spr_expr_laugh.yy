@@ -31,7 +31,7 @@
   "origin":2,
   "parent":{
     "name":"TV",
-    "path":"folders/Sprites/TV.yy",
+    "path":"folders/Sprites/Player/TV.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

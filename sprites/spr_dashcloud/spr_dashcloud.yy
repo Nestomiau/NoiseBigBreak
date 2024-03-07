@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"particle",
-    "path":"folders/Sprites/particle.yy",
+    "name":"Particles",
+    "path":"folders/Sprites/Particles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

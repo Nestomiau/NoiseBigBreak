@@ -45,7 +45,6 @@
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"","%Name":"inst_173D208D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_173D208D","objectId":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":119.0,"scaleY":17.0,"x":352.0,"y":1856.0,},
         {"$GMRInstance":"","%Name":"inst_1B0B8EB3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1B0B8EB3","objectId":{"name":"obj_verticalhallway","path":"objects/obj_verticalhallway/obj_verticalhallway.yy",},"properties":[
-            {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_hallway","path":"objects/obj_hallway/obj_hallway.yy",},"propertyId":{"name":"targetRoom","path":"objects/obj_hallway/obj_hallway.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"testroom_1",},
             {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_verticalhallway","path":"objects/obj_verticalhallway/obj_verticalhallway.yy",},"propertyId":{"name":"targetRoom","path":"objects/obj_verticalhallway/obj_verticalhallway.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"testroom_1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.5,"scaleY":2.5,"x":0.0,"y":2016.0,},
         {"$GMRInstance":"","%Name":"inst_43F2A93D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_43F2A93D","objectId":{"name":"obj_doorB","path":"objects/obj_doorB/obj_doorB.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":2016.0,},
@@ -84,8 +83,8 @@
   ],
   "name":"testroom_2",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"JunkBeach",
+    "path":"folders/Rooms/JunkBeach.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

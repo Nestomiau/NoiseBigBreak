@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Level Desing",
+    "path":"folders/Sprites/Level Desing.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

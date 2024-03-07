@@ -11,8 +11,8 @@
   "name":"obj_destroyable",
   "overriddenProperties":[],
   "parent":{
-    "name":"level structure",
-    "path":"folders/Objects/level structure.yy",
+    "name":"Blocks",
+    "path":"folders/Objects/Level Desing/Blocks.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",
