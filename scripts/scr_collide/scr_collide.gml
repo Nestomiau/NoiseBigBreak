@@ -92,7 +92,7 @@ function scr_collide_player()
 	// vertical movement
 	var vsp_final = vsp + vsp_carry;
 	vsp_carry = 0;
-	
+
 	var target_y = round(y + vsp_final);
 	var bbox_size_y = bbox_bottom - bbox_top;
 	var t = abs(target_y - y) / bbox_size_y;
@@ -126,7 +126,7 @@ function scr_collide_player()
 	// horizontal movement
 	var hsp_final = hsp + hsp_carry;
 	hsp_carry = 0;
-	
+		
 	var target_x = round(x + hsp_final);
 	var bbox_size_x = bbox_right - bbox_left;
 	var t = abs(target_x - x) / bbox_size_x;

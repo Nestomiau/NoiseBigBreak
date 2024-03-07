@@ -1,0 +1,1 @@
+targetRoom = harroz_1

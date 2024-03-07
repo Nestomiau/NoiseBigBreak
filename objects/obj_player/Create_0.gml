@@ -12,6 +12,7 @@ enum states
 	actor,
 	hitstun,
 	dresser,
+	dead,
 }
 #macro mach2_time 30
 
@@ -35,6 +36,8 @@ inv = 0;
 getLife = 0
 dresserMenu = 0
 customizing = 0
+deadCooldown = 240
+ofScreen=0
 
 input_buffer_jump = 0;
 
@@ -44,35 +47,34 @@ verticalspd = 0;
 targetRoom = 0;
 targetDoor = "A";
 
-scr_player_addslopemomentum = function(acc, dec)
-{
-	with (instance_place(x, y + 1, obj_slope))
-	{
-		if sign(image_xscale) == -sign(other.xscale) && other.movespeed < 19
+scr_player_addslopemomentum = function(acc, dec) {
+	with (instance_place(x, y + 1, obj_slope)) {
+		if (sign(image_xscale) == -sign(other.xscale) && other.movespeed < 19)
 			other.movespeed += acc;
-		else if other.movespeed > 12
+		else if (other.movespeed > 12)
 			other.movespeed -= dec;
 	}
 }
-scr_hurtplayer = function()
-{
-	if state == states.hurt or inv > 0
+scr_hurtplayer = function() {
+	if (state == states.hurt || state == states.dead || inv > 0)
 		exit;
 	
 	hp--;
-	if hp <= 0 {
-		instance_destroy(obj_noisette)
-		instance_destroy();
-	}
-	
 	sound_play_3d(sfx_hurt, x, y);
-	grounded = false;
-	movespeed = 0;
-	hsp = xscale * -6;
-	vsp = -10;
-	global.collect = clamp(global.collect-5,0,99999)
-	state = states.hurt;
-	sprite_index = spr_hurt;
+	if (hp <= 0) {
+		state = states.dead
+		vsp = -18
+		hsp = 0
+		deadCooldown = 120
+	}else {
+		grounded = false;
+		movespeed = 0;
+		hsp = xscale * -6;
+		vsp = -10;
+		global.collect = clamp(global.collect-5,0,99999)
+		state = states.hurt;
+		sprite_index = spr_hurt;
+	}
 }
 
 // effects
@@ -81,20 +83,17 @@ machsnd_play = noone;
 part_time = 0;
 jumpclouds = 0;
 
-set_machsnd = function(sound)
-{
-	if machsnd == sound
+set_machsnd = function(sound) {
+	if (machsnd == sound)
 		exit;
 	
-	if machsnd != noone
+	if (machsnd != noone)
 		audio_stop_sound(machsnd_play);
 	
-	if sound != noone
-	{
+	if (sound != noone) {
 		machsnd = sound;
 		machsnd_play = audio_play_sound(sound, 0, true);
-	}
-	else
+	}else
 		machsnd = noone;
 }
 
@@ -129,6 +128,9 @@ charSPR = function(_char) {
 			spr_longjump = spr_player_mach2jump
 			spr_longjumpend = spr_player_longjumpend
 			spr_hurt = spr_player_hurt
+			spr_enterdoor = spr_player_enterdoor
+			spr_dies = spr_player_dies
+			spr_exitdoor = spr_player_exitdoor
 			
 			// TV Sprites
 			spr_tvMach3 = spr_expr_mach3

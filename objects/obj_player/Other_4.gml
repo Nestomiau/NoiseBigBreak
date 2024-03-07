@@ -49,4 +49,7 @@ if door_obj
 	}
 }
 
+if(sprite_index == spr_enterdoor)
+	sprite_index = spr_exitdoor
+
 instance_create(x, y, obj_noisette);

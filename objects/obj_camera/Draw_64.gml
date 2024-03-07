@@ -1,4 +1,4 @@
-if(!global.drawTV || global.dressing)
+if(!global.drawTV || global.dressing || instance_exists(plr))
 	exit
 	
 if(plr.inv > 0 || plr.state == states.hurt)

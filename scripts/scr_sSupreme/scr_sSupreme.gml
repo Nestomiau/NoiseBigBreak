@@ -23,7 +23,7 @@ function scr_sSupreme_set(_shader = 1, _invert = 0,_colors = [],_cleanC = 1) {
 		shader_set_uniform_i(_i,1)
 	}
 }
-function scr_sSupreme_colorS(_v1,_v2,_idx){
+function scr_sSupreme_colorS(_v1,_v2,_idx){ //Set Colors
 	var _param
 	var _i = 0
 	
@@ -38,7 +38,7 @@ function scr_sSupreme_colorS(_v1,_v2,_idx){
 	shader_set_uniform_f_array(_param,_r2)
 	
 }
-function scr_sSupreme_reset(){
+function scr_sSupreme_reset(){ //I Just Copied This From RPS
 	if(shader_current() != -1)
 		shader_reset()
 }

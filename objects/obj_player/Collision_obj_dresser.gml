@@ -1,4 +1,6 @@
-if(key_up2 && state != states.dresser){
+live_auto_call
+
+if(key_up2 && state != states.dresser && state != states.dead && state != states.hurt){
 	state = states.dresser
 	global.dressing = 1
 	hsp = 0

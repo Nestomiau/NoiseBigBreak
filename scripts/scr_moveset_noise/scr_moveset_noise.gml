@@ -437,3 +437,11 @@ function scr_noise_dresser() {
 	break
 	}
 }
+
+function scr_noise_dead() {
+	sprite_index = spr_dies
+	if(ofScreen)
+		deadCooldown--
+	if(deadCooldown <= 0)
+		game_restart()
+}

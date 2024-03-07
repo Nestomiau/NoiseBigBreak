@@ -1,1 +1,1 @@
-room_goto(harroz_1);
+room_goto(testroom_1);

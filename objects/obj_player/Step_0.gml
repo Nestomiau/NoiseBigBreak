@@ -19,25 +19,13 @@ if input_buffer_jump > 0
 
 switch state
 {
-	case states.normal:
-		state_normal()
-	break;	
-	case states.jump:
-	case states.bounce:
-		state_jump()
-	break;
-	case states.wallslide:
-		state_wallslide()
-	break;	
-	case states.slide:
-		state_slide()
-	break;
-	case states.hurt:
-		state_hurt()
-	break;
-	case states.dresser :
-		scr_noise_dresser()
-	break;
+	case states.normal : state_normal() break
+	case states.jump : case states.bounce : state_jump() break
+	case states.wallslide : state_wallslide() break
+	case states.slide : state_slide() break
+	case states.hurt : state_hurt() break
+	case states.dresser : scr_noise_dresser() break
+	case states.dead : scr_noise_dead() break
 }
 
 if grounded && state == states.normal
@@ -63,10 +51,8 @@ else
 	grav = 0.5;
 
 // collide destructibles
-if state == states.bounce
-{
-	with instance_place(x, y + vsp + 1, obj_destroyable)
-	{
+if (state == states.bounce) {
+	with (instance_place(x, y + vsp + 1, obj_destroyable)) {
 		other.vsp = -14;
 		other.grounded = false;
 		if(!isMetal)
@@ -81,34 +67,40 @@ with instance_place(x, y + vsp + 1, obj_destroyable)
 	if(other.movespeed > destroyspeed || (other.state == states.slide && (!isMetal || other.movespeed > destroyspeed)))
 		instance_destroy();
 
-scr_collide_player();
+if(state != states.dead)
+	scr_collide_player();
+else{
+	hsp += hsp_carry
+	vsp += vsp_carry
+	hsp_carry=0
+	vsp_carry=0
+	x += hsp
+	y += vsp
+	
+	if (vsp < 20)
+		vsp += grav;
+}
+	
 
-if inv > 0
-{
+if (inv > 0) {
 	image_alpha = 1 - (floor(inv / 3) % 2);
 	inv--;
-}
-else
-{
+}else {
 	image_alpha = 1;
 	inv = 0;
 }
 
 // spikes
 var spike = instance_nearest(x, y, obj_spike);
-if spike && abs(distance_to_object(spike)) < 1
-{
-	if state == states.bounce
-	{
+if (spike && abs(distance_to_object(spike)) < 1) {
+	if (state == states.bounce) {
 		vsp = -14;
 		grounded = false;
-	}
-	else
+	}else
 		scr_hurtplayer();
 }
 
-if mouse_check_button_pressed(mb_left)
-{
+if mouse_check_button_pressed(mb_left) {
 	x = mouse_x;
 	y = mouse_y;
 }
