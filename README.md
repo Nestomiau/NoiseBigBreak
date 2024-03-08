@@ -8,10 +8,17 @@ This Mod is not supposed to be fully accurate to Noise's Big Break, if you want 
 This is just a public list of Ideas I May Add To The Mod In The Future.
 
 'Classic' Noise
+
 Peppino Spaghetti
+
 More Noisette
+
 Snick.exe
+
 Baddies(Enemies)
+
 Noisette Palettes
+
 Custom Sprites, Songs and etc.
+
 Transformations (maybe?)
