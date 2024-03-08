@@ -16,7 +16,7 @@
     {"name":"Blocks","order":27,"path":"folders/Sprites/Level Desing/Blocks.yy",},
     {"name":"Doors","order":28,"path":"folders/Sprites/Level Desing/Doors.yy",},
     {"name":"Solids","order":29,"path":"folders/Sprites/Level Desing/Solids.yy",},
-    {"name":"Noissette","order":13,"path":"folders/Sprites/Noissette.yy",},
+    {"name":"Noisette","order":13,"path":"folders/Sprites/Noisette.yy",},
     {"name":"Particles","order":14,"path":"folders/Sprites/Particles.yy",},
     {"name":"Player","order":15,"path":"folders/Sprites/Player.yy",},
     {"name":"Noise","order":34,"path":"folders/Sprites/Player/Noise.yy",},

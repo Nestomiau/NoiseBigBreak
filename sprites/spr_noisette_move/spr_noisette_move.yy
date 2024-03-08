@@ -38,8 +38,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Noissette",
-    "path":"folders/Sprites/Noissette.yy",
+    "name":"Noisette",
+    "path":"folders/Sprites/Noisette.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
