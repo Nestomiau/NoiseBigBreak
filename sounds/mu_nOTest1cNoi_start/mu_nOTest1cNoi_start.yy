@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mu_nOTest1cNoi_start",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":13.433333,
+  "name":"mu_nOTest1cNoi_start",
+  "parent":{
+    "name":"noiseOrangeTest1c-Noi",
+    "path":"folders/Sounds/MU/noiseOrangeTest1c-Noi.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_nOTest1cNoi_start.wav",
+  "type":0,
+  "volume":1.0,
+}

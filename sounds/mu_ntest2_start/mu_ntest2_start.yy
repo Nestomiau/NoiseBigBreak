@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":23.96,
+  "duration":24.44,
   "name":"mu_ntest2_start",
   "parent":{
     "name":"noise_test_2",

@@ -9,6 +9,7 @@ function scr_music_playSong(_trigger) {
 		var _val = ds_list_find_value(global.musics,_idx)
 		if(array_get_index(_val[2],playSong) > -1)
 			exit
+		audio_stop_sound(playSong)
 		audio_play_sound(_val[0],100,0)
 		playSong = _val[0]
 		endTrigger = _val[1]
