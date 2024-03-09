@@ -1,11 +1,8 @@
 function scr_noise_normal(){
 		hsp = xscale * movespeed;
 		
-		if (place_meeting(x + sign(hsp), y, obj_solid) or scr_solid_slope(x + sign(hsp), y))
-		&& (!place_meeting(x + hsp, y, obj_destroyable) or movespeed <= 12)
-		{
-			if place_meeting(x, y + 1, obj_slope)
-			{
+		if (place_meeting(x + sign(hsp), y, obj_solid) or scr_solid_slope(x + sign(hsp), y))&& (!place_meeting(x + hsp, y, obj_destroyable) or movespeed <= 12) {
+			if place_meeting(x, y + 1, obj_slope) {
 				vsp = -movespeed;
 				sound_play_3d(sfx_wallslide, x, y);
 			
@@ -430,6 +427,12 @@ function scr_noise_dresser() {
 
 function scr_noise_dead() {
 	sprite_index = spr_dies
+	hsp = movespeed
+	if (vsp < 20)
+		vsp += grav
+	x += hsp
+	y += vsp
+	movespeed*=0.96
 	if(ofScreen)
 		deadCooldown--
 	if(deadCooldown <= 0)

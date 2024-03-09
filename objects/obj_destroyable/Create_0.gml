@@ -9,3 +9,4 @@ particle = {
 	amount : 6,
 	dStruct : {},
 }
+landSfx = noone

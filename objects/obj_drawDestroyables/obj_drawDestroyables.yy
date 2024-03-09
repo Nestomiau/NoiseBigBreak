@@ -1,18 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_slope",
+  "%Name":"obj_drawDestroyables",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_slope",
+  "name":"obj_drawDestroyables",
   "overriddenProperties":[],
   "parent":{
-    "name":"Collision",
-    "path":"folders/Objects/Level Desing/Collision.yy",
+    "name":"Internal",
+    "path":"folders/Objects/Internal.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -30,9 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_slope",
-    "path":"sprites/spr_slope/spr_slope.yy",
+    "name":"spr_destroyable",
+    "path":"sprites/spr_destroyable/spr_destroyable.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_1pixel",
+    "path":"sprites/spr_1pixel/spr_1pixel.yy",
+  },
   "visible":true,
 }

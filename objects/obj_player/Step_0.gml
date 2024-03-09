@@ -1,7 +1,6 @@
 live_auto_call
 
-if !keyboard_check(vk_control) && keyboard_check_pressed(ord("R"))
-{
+if (!keyboard_check(vk_control) && keyboard_check_pressed(ord("R"))) {
 	ds_list_clear(global.saveroom);
 	event_perform(ev_create, 0);
 	targetDoor = "";
@@ -11,14 +10,13 @@ if !keyboard_check(vk_control) && keyboard_check_pressed(ord("R"))
 
 getInput()
 
-if key_jump
+if (key_jump)
 	input_buffer_jump = 10;
-if input_buffer_jump > 0
+if (input_buffer_jump > 0)
 	input_buffer_jump--;
 
 
-switch state
-{
+switch (state) {
 	case states.normal : state_normal() break
 	case states.jump : case states.bounce : state_jump() break
 	case states.wallslide : state_wallslide() break
@@ -28,9 +26,8 @@ switch state
 	case states.dead : scr_noise_dead() break
 }
 
-if grounded && state == states.normal
-{
-	if movespeed > 12
+if (grounded && state == states.normal) {
+	if movespeed > 11
 		set_machsnd(sfx_mach3);
 	else if sprite_index == spr_mach2
 		set_machsnd(sfx_mach2);
@@ -38,8 +35,7 @@ if grounded && state == states.normal
 		set_machsnd(sfx_mach1);
 	else
 		set_machsnd(noone);
-}
-else
+}else
 	set_machsnd(noone);
 
 if state != states.jump && state != states.normal
@@ -69,18 +65,6 @@ with instance_place(x, y + vsp + 1, obj_destroyable)
 
 if(state != states.dead)
 	scr_collide_player();
-else{
-	hsp += hsp_carry
-	vsp += vsp_carry
-	hsp_carry=0
-	vsp_carry=0
-	x += hsp
-	y += vsp
-	
-	if (vsp < 20)
-		vsp += grav;
-}
-	
 
 if (inv > 0) {
 	image_alpha = 1 - (floor(inv / 3) % 2);
@@ -91,13 +75,20 @@ if (inv > 0) {
 }
 
 // spikes
-var spike = instance_nearest(x, y, obj_spike);
-if (spike && abs(distance_to_object(spike)) < 1) {
-	if (state == states.bounce) {
-		vsp = -14;
-		grounded = false;
-	}else
-		scr_hurtplayer();
+var _dir = [[0,-1],[1,0],[0,1],[-1,0],[0,0]]
+var _i = 0
+repeat(5){
+	if(instance_place(x+_dir[_i][0],y+_dir[_i][1],obj_spike)) {
+		if (state == states.bounce) {
+			vsp = -14;
+			grounded = false;
+			break
+		}else {
+			scr_hurtplayer(); 
+			break
+		}
+	}
+	_i++
 }
 
 if mouse_check_button_pressed(mb_left) {
