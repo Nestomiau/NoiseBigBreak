@@ -70,6 +70,7 @@
     {"name":"spr_dashpad","order":1,"path":"sprites/spr_dashpad/spr_dashpad.yy",},
     {"name":"spr_debris","order":6,"path":"sprites/spr_debris/spr_debris.yy",},
     {"name":"spr_destroyable2","order":1,"path":"sprites/spr_destroyable2/spr_destroyable2.yy",},
+    {"name":"spr_destroyable","order":7,"path":"sprites/spr_destroyable/spr_destroyable.yy",},
     {"name":"spr_donut","order":2,"path":"sprites/spr_donut/spr_donut.yy",},
     {"name":"spr_doorA","order":1,"path":"sprites/spr_doorA/spr_doorA.yy",},
     {"name":"spr_doorB","order":2,"path":"sprites/spr_doorB/spr_doorB.yy",},

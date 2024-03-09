@@ -304,74 +304,64 @@ function scr_noise_wallslide() {
 }
 
 function scr_noise_slide(){
-		hsp = xscale * movespeed;
-		if (place_meeting(x + sign(hsp), y, obj_solid) or scr_solid_slope(x + sign(hsp), y))
-		&& !place_meeting(x + hsp, y, obj_destroyable)
-			movespeed = 0;
+	hsp = xscale * movespeed;
+	if (place_meeting(x + sign(hsp), y, obj_solid) or scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_destroyable)
+		movespeed = 0;
+	
+	if (sprite_index == spr_forkstart && image_index >= image_number - 1)
+		sprite_index = spr_crouchslip;
+	if(sprite_index == spr_dive && movespeed < 19) {
+		if(movespeed < 16)
+			movespeed += .4
+		else
+			movespeed += .02
+	}
+	
+	if (grounded){
+		if (sprite_index == spr_dive) {
+			sound_play_3d(sfx_land, x, y);
+			
+			state = states.normal;
+			sprite_index = spr_runland;
+			image_index = 0;
+		}else {
+			if (++part_time >= 16) {
+				part_time = 0;
+				create_particle(x, y, spr_dashcloud, xscale);
+			}
+			movespeed = Approach(movespeed, 0, 0.1);
 		
-		if sprite_index == spr_forkstart && image_index >= image_number - 1
-			sprite_index = spr_crouchslip;
-		if(sprite_index == spr_dive && movespeed < 19) {
-			if(movespeed < 16)
-				movespeed += .4
-			else
-				movespeed += .02
-		}
-		
-		if grounded
-		{
-			if sprite_index == spr_dive
-			{
-				sound_play_3d(sfx_land, x, y);
-				
+			if movespeed <= 0
 				state = states.normal;
-				sprite_index = spr_runland;
+		
+			if (input_buffer_jump) {
+				input_buffer_jump = 0;
+				sound_play_3d(sfx_jump, x, y);
+				create_particle(x, y, spr_highjumpcloud2);
+			
+				jumpstop = false;
+				sprite_index = spr_longjump;
 				image_index = 0;
+				state = states.jump;
+				vsp = -14;
+				jumpclouds = 12;
 			}
-			else
-			{
-				if ++part_time >= 16
-				{
-					part_time = 0;
-					create_particle(x, y, spr_dashcloud, xscale);
-				}
-				movespeed = Approach(movespeed, 0, 0.1);
-			
-				if movespeed <= 0
-					state = states.normal;
-			
-				if input_buffer_jump
-				{
-					input_buffer_jump = 0;
-					sound_play_3d(sfx_jump, x, y);
-					create_particle(x, y, spr_highjumpcloud2);
-				
-					jumpstop = false;
-					sprite_index = spr_longjump;
-					image_index = 0;
-					state = states.jump;
-					vsp = -14;
-					jumpclouds = 12;
-				}
-				scr_player_addslopemomentum(0.4, 0.2);
-			}
+			scr_player_addslopemomentum(0.4, 0.2);
 		}
-		else if place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + hsp, y, obj_destroyable)
-		{
-			sound_play_3d(sfx_wallslide, x, y);
-			
-			state = states.wallslide;
-			sprite_index = spr_wallslide;
-		}
+	}else if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + hsp, y, obj_destroyable)) {
+		sound_play_3d(sfx_wallslide, x, y);
+		
+		state = states.wallslide;
+		sprite_index = spr_wallslide;
+	}
 }
 
 function scr_noise_hurt() {
-		if grounded && vsp >= 0
-		{
-			state = states.normal;
-			movespeed = 0;
-			inv = 80;
-		}
+	if (grounded && vsp >= 0) {
+		state = states.normal;
+		movespeed = 0;
+		inv = 80;
+	}
 }
 
 function scr_noise_dresser() {
