@@ -63,8 +63,14 @@ with instance_place(x, y + vsp + 1, obj_destroyable)
 	if(other.movespeed > destroyspeed || (other.state == states.slide && (!isMetal || other.movespeed > destroyspeed)))
 		instance_destroy();
 
-if(state != states.dead)
+if(collide)
 	scr_collide_player();
+else {
+	if (vsp < 20 && fall)
+		vsp += grav
+	x += hsp
+	y += vsp
+}
 
 if (inv > 0) {
 	image_alpha = 1 - (floor(inv / 3) % 2);
@@ -82,11 +88,9 @@ repeat(5){
 		if (state == states.bounce) {
 			vsp = -14;
 			grounded = false;
-			break
-		}else {
+		}else 
 			scr_hurtplayer(); 
-			break
-		}
+		break
 	}
 	_i++
 }

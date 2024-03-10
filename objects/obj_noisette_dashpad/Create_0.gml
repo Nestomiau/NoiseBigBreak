@@ -1,2 +1,1 @@
-event_inherited();
-force = 16;
+event_inherited()

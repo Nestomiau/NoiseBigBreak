@@ -1,16 +1,28 @@
-var _x = 0
-var _OBJ = []
-
-repeat((room_width-(room_width)mod(32))/32){
-	var _y = 0
-	repeat((room_height-(room_height)mod(32))/32){
-		with(instance_place(_x,_y,obj_destroyable)){
-			if(array_get_index(_OBJ,id) == -1) {
-				draw_sprite(sprite_index,image_index,x,y)
-				_OBJ[array_length(_OBJ)] = id
-			}
+var _O = []
+var _drawL = []
+var _i = 0
+repeat(instance_number(obj_destroyable)){
+	_O[_i] = instance_find(obj_destroyable,_i)
+	_i++
+}
+_i = 0
+while(array_length(_O)!=array_length(_drawL)){
+	var _val = [99999999,-1]
+	var __i = 0
+	repeat(array_length(_O)){
+		if((-_O[__i].x+_O[__i].y < _val[0]) && array_get_index(_drawL,__i) < 0) {
+			_val[0] = -_O[__i].x+_O[__i].y
+			_val[1] = __i
 		}
-		_y+=32
+		__i++
 	}
-	_x+=32
+	_drawL[_i] = _val[1]
+	_i++
+}
+_i = 0
+repeat(array_length(_O)){
+	with(_O[_drawL[_i]]){
+		draw_self()
+	}
+	_i++
 }

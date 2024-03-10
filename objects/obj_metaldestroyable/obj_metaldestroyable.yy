@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_metaldestroyable",
+  "%Name":"obj_metalDestroyable",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_metaldestroyable",
+  "name":"obj_metalDestroyable",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_metaldestroyable",
-    "path":"sprites/spr_metaldestroyable/spr_metaldestroyable.yy",
+    "name":"spr_metalDestroyable",
+    "path":"sprites/spr_metalDestroyable/spr_metalDestroyable.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -9,7 +9,8 @@ if(contain != []) {
 		_i++
 	}
 }
+var _xy = (instance_place(x,y,obj_player))?[obj_player.x,obj_player.y]:[x,y]
 if(playSfx != noone)
-	sound_play_3d(playSfx[random(array_length(playSfx)-1)],obj_player.x,obj_player.y)
+	sound_play_3d(playSfx[random(array_length(playSfx)-1)],_xy[0],_xy[1])
 
 ds_list_add(global.saveroom, id);

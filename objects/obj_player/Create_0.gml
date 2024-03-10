@@ -38,6 +38,9 @@ dresserMenu = 0
 customizing = 0
 deadCooldown = 240
 ofScreen=0
+plrPal = 0
+fall = 1
+collide = 1
 
 input_buffer_jump = 0;
 
@@ -66,6 +69,7 @@ scr_hurtplayer = function() {
 		vsp = -18
 		hsp = 0
 		deadCooldown = 120
+		collide = 0
 	}else {
 		grounded = false;
 		movespeed = 0;
@@ -140,7 +144,7 @@ charSPR = function(_char) {
 			
 			// Draw Relacted
 			OgColors = [[0,0,0],[248,224,128],[167,127,14],[255,255,255],[255,170,131],[169,56,0],[248,0,0],[216,136,24]]
-			curentPalette = 10
+			curentPalette = 1
 			paletteList= [	
 				[2,[216,136,24]], //Default
 				[1,[48,80,120],2,[40,48,64],7,[192,128,56]], //Hardoween
@@ -171,6 +175,8 @@ charSPR = function(_char) {
 				variable_instance_set(id,$"state_{_name[_i]}",asset_get_index($"scr_{_funcName}_{_name[_i]}"))
 				_i++
 			}
+			
+			plrPal = scr_player_setPalette()
 		break
 	}
 }
@@ -197,5 +203,3 @@ getInput = function(){
 //Set Behavior
 charSPR("N")
 getInput()
-
-

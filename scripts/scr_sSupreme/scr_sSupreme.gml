@@ -1,4 +1,4 @@
-function scr_sSupreme_set(_shader = 1, _invert = 0,_colors = [],_cleanC = 1,) {
+function scr_sSupreme_set(_shader = 1, _invert = -1,_colors = [],_cleanC = 1,) {
 	if(_shader || shader_current() != -1)
 		shader_set(shd_sSupreme)
 	var _i = 1
@@ -18,8 +18,10 @@ function scr_sSupreme_set(_shader = 1, _invert = 0,_colors = [],_cleanC = 1,) {
 		_i++
 	}
 	//Invert
-	_i = shader_get_uniform(shd_sSupreme,"i_invert")
-	shader_set_uniform_i(_i,_invert)
+	if(_invert != -1) {
+		_i = shader_get_uniform(shd_sSupreme,"i_invert")
+		shader_set_uniform_i(_i,_invert)
+	}
 }
 function scr_sSupreme_colorS(_v1,_v2,_idx){ //Set Colors
 	var _i = 0

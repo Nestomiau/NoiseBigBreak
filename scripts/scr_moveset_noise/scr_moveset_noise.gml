@@ -423,15 +423,11 @@ function scr_noise_dresser() {
 		}
 	break
 	}
+	plrPal = scr_player_setPalette()
 }
 
 function scr_noise_dead() {
 	sprite_index = spr_dies
-	hsp = movespeed
-	if (vsp < 20)
-		vsp += grav
-	x += hsp
-	y += vsp
 	movespeed*=0.96
 	if(ofScreen)
 		deadCooldown--

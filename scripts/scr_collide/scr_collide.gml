@@ -153,7 +153,7 @@ function scr_collide_player()
 	}
 	
 	// gravity
-	if (vsp < 20)
+	if (vsp < 20 && fall)
 		vsp += grav;
 	
 	// moving platforms
