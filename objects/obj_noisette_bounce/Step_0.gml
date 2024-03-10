@@ -1,4 +1,4 @@
-live_auto_call;
+live_auto_call
 
 event_inherited();
 switch state
@@ -11,5 +11,5 @@ switch state
 		player.grounded = false;
 
 		state = 0;
-		break;
+		break
 }

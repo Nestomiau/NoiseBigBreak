@@ -28,10 +28,10 @@ if(other.send){
 	y = lerp(y,other.y,0.3)
 	hsp = 0
 	vsp = 0
-	if(other.cooldown < 1){
+	if(!other.cooldown){
 		collide = 0
 		fall = 0
-		other.cooldown = 30
+		other.cooldown = other.maxcooldown
 		other.plr = self
 		sprite_index = spr_fall
 		state = states.actor

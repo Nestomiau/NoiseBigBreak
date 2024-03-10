@@ -30,6 +30,7 @@
     {"$GMObjectProperty":"","%Name":"type","filters":[],"listItems":[],"multiselect":false,"name":"type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"","%Name":"dir","filters":[],"listItems":[],"multiselect":false,"name":"dir","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"vk_up","varType":4,},
     {"$GMObjectProperty":"","%Name":"force","filters":[],"listItems":[],"multiselect":false,"name":"force","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"12","varType":0,},
+    {"$GMObjectProperty":"","%Name":"maxcooldown","filters":[],"listItems":[],"multiselect":false,"name":"maxcooldown","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"30","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

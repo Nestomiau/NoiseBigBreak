@@ -42,6 +42,7 @@ plrPal = 0
 fall = 1
 collide = 1
 
+
 input_buffer_jump = 0;
 
 verticalpos = 0;
