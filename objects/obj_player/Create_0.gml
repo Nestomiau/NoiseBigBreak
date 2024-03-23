@@ -83,23 +83,23 @@ scr_hurtplayer = function() {
 }
 
 // effects
-machsnd = noone;
-machsnd_play = noone;
-part_time = 0;
-jumpclouds = 0;
+machsnd = noone
+machsnd_play = noone
+part_time = 0
+jumpclouds = 0
 
 set_machsnd = function(sound) {
 	if (machsnd == sound)
 		exit;
 	
 	if (machsnd != noone)
-		audio_stop_sound(machsnd_play);
+		audio_stop_sound(machsnd_play)
 	
 	if (sound != noone) {
-		machsnd = sound;
-		machsnd_play = audio_play_sound(sound, 0, true);
+		machsnd = sound
+		machsnd_play = audio_play_sound(sound, 0, true)
 	}else
-		machsnd = noone;
+		machsnd = noone
 }
 
 charSPR = function(_char) {
@@ -153,24 +153,19 @@ charSPR = function(_char) {
 				[1,[48,168,248],2,[40,80,168],4,[192,128,56],5,[106,27,27],7,[216,104,160]], //Doise
 				[1,[224,48,0],2,[88,0,0],4,[96,208,72],5,[93,108,24],7,[229,155,134]], //Blood Red
 				[1,[152,80,248],2,[80,0,184],4,[136,164,200],5,[85,47,88],6,[88,0,184],7,[224,48,0]], //TV Prurple
-				[1,[0,0,0],2,[0,0,0],5,[114,49,71],7,[88,0,184]], //Black IDR
+				[1,[0,0,0],2,[0,0,0],5,[114,49,71],7,[88,0,184]], //Black IDRK
 				[1,[192,128,56],2,[120,56,0],5,[114,49,71],6,[248,0,0],7,[48,80,120]], //Shitty
 				[1,[255,255,255],2,[136,168,200],6,[248,0,0],7,[48,80,120]], //Familiar Candy Maker
 				[1,[232,80,152],2,[168,40,96],4,[224,48,0],5,[129,15,61],6,[88,0,184],7,[224,48,0]], //Pinkish Red
 				[1,[248,112,24],2,[160,56,0],7,[248,224,128]], //Mooney				
 			]
-			customPalettes = []
-			var _i = 0
-			repeat(3){
-				customPalettes[_i] = [0,[0,0,0],1,[255,255,255],2,[128,128,128],3,[255,255,255],4,[255,170,131],5,[169,56,0],6,[248,0,0],7,[98,98,98]]
-				_i++
-			}
+			customPalettes =  array_create(3,[0,[0,0,0],1,[255,255,255],2,[128,128,128],3,[255,255,255],4,[255,170,131],5,[169,56,0],6,[248,0,0],7,[98,98,98]])
 			inverted = 0
 			chanCol = 0
 			
 			//STATES
 			var _funcName = "noise"
-			_i = 0
+			var _i = 0
 			var _name = ["normal","jump","wallslide","slide","hurt"]
 			repeat(array_length(_name)) {
 				variable_instance_set(id,$"state_{_name[_i]}",asset_get_index($"scr_{_funcName}_{_name[_i]}"))

@@ -13,7 +13,7 @@
   "name":"mu_nOTest1cNoi_start",
   "parent":{
     "name":"noiseOrangeTest1c-Noi",
-    "path":"folders/Sounds/MU/noiseOrangeTest1c-Noi.yy",
+    "path":"folders/Sounds/Music/noiseOrangeTest1c-Noi.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

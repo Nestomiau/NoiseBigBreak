@@ -13,7 +13,7 @@
   "name":"mu_ntest2_loop",
   "parent":{
     "name":"noise_test_2",
-    "path":"folders/Sounds/MU/noise_test_2.yy",
+    "path":"folders/Sounds/Music/noise_test_2.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

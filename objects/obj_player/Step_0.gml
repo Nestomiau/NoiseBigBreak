@@ -1,11 +1,11 @@
 live_auto_call
 
 if (!keyboard_check(vk_control) && keyboard_check_pressed(ord("R"))) {
-	ds_list_clear(global.saveroom);
-	event_perform(ev_create, 0);
-	targetDoor = "";
-	audio_stop_all();
-	room_restart();
+	ds_list_clear(global.saveroom)
+	event_perform(ev_create, 0)
+	targetDoor = ""
+	audio_stop_all()
+	room_restart()
 }
 
 getInput()
@@ -28,31 +28,31 @@ switch (state) {
 
 if (grounded && state == states.normal) {
 	if movespeed > 11
-		set_machsnd(sfx_mach3);
+		set_machsnd(sfx_mach3)
 	else if sprite_index == spr_mach2
-		set_machsnd(sfx_mach2);
+		set_machsnd(sfx_mach2)
 	else if sprite_index == spr_mach1
-		set_machsnd(sfx_mach1);
+		set_machsnd(sfx_mach1)
 	else
-		set_machsnd(noone);
+		set_machsnd(noone)
 }else
-	set_machsnd(noone);
+	set_machsnd(noone)
 
 if state != states.jump && state != states.normal
 	mach2 = 0;
 
 if state == states.wallslide or (state == states.jump && mach2 >= mach2_time && vsp < 0)
-	grav = 0.25;
+	grav = 0.25
 else
-	grav = 0.5;
+	grav = 0.5
 
 // collide destructibles
 if (state == states.bounce) {
 	with (instance_place(x, y + vsp + 1, obj_destroyable)) {
-		other.vsp = -14;
-		other.grounded = false;
+		other.vsp = -14
+		other.grounded = false
 		if(!isMetal)
-			instance_destroy();
+			instance_destroy()
 	}
 }
 
@@ -74,7 +74,7 @@ else {
 
 if (inv > 0) {
 	image_alpha = 1 - (floor(inv / 3) % 2);
-	inv--;
+	inv--
 }else {
 	image_alpha = 1;
 	inv = 0;
@@ -86,10 +86,10 @@ var _i = 0
 repeat(5){
 	if(instance_place(x+_dir[_i][0],y+_dir[_i][1],obj_spike)) {
 		if (state == states.bounce) {
-			vsp = -14;
-			grounded = false;
+			vsp = -14
+			grounded = false
 		}else 
-			scr_hurtplayer(); 
+			scr_hurtplayer();
 		break
 	}
 	_i++

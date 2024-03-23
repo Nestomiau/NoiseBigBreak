@@ -1,17 +1,14 @@
-function scr_solid(_x, _y)
-{
+function scr_solid(_x, _y) {
 	var old_x = x;
 	var old_y = y;
 	x = _x;
 	y = _y;
-	if (place_meeting(x, y, obj_solid))
-	{
+	if (place_meeting(x, y, obj_solid)) {
 		x = old_x;
 		y = old_y;
 		return true;
 	}
-	if (y > old_y && place_meeting(x, y, obj_platform))
-	{
+	if (y > old_y && place_meeting(x, y, obj_platform)) {
 		var num = instance_place_list(x, y, obj_platform, global.instancelist, false);
 		var _collided = false;
 		for (var i = 0; i < num; i++)
@@ -21,15 +18,13 @@ function scr_solid(_x, _y)
 				_collided = true;
 		}
 		ds_list_clear(global.instancelist);
-		if (_collided)
-		{
+		if (_collided) {
 			x = old_x;
 			y = old_y;
 			return true;
 		}
 	}
-	if (check_slope(obj_slope))
-	{
+	if (check_slope(obj_slope)) {
 		x = old_x;
 		y = old_y;
 		return true;
@@ -43,34 +38,26 @@ function check_slope(slope_object)
 	if live_call(slope_object) return live_result;
 	
 	var slope = instance_place(x, y, slope_object);
-	with (slope)
-	{
+	with (slope) {
 		var left = bbox_left;
 		var bottom = bbox_bottom;
 		var right = bbox_right;
 		var top = bbox_top;
 		
-		if sign(image_xscale) == -1
-		{
+		if (sign(image_xscale) == -1) {
 			left = bbox_right;
 			right = bbox_left;
 		}
 		
-		if object_index == obj_fuckedupslope
-		{
+		if (object_index == obj_fuckedupslope) 
 			return place_meeting(x, y, other);
-		}
-		else if object_index == obj_convexslope
-		{
+		else if (object_index == obj_convexslope) {
 			right += sprite_width;
 			bottom += sprite_height;
 			return collision_ellipse(left, top, right, bottom, other, true, false);
-		}
-		else
-		{
+		}else
 			return rectangle_in_triangle(other.bbox_left, other.bbox_top, other.bbox_right, other.bbox_bottom,
 				left, bottom, right, bottom, right, top);
-		}
 	}
 	return false;
 }

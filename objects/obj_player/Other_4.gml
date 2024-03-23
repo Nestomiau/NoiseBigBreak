@@ -1,11 +1,10 @@
 live_auto_call
 
-var door_obj = noone;
-with obj_doorX
-{
+var door_obj = noone
+with (obj_doorX) {
 	if (door == other.targetDoor) {
-		door_obj = id;
-		break;
+		door_obj = id
+		break
 	}
 }
 
