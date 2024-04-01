@@ -1,7 +1,7 @@
 {
   "$GMShader":"",
-  "%Name":"shd_sSupreme",
-  "name":"shd_sSupreme",
+  "%Name":"shd_MultiUse",
+  "name":"shd_MultiUse",
   "parent":{
     "name":"Shaders",
     "path":"folders/Shaders.yy",

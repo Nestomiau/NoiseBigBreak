@@ -4,9 +4,9 @@ if(global.dressing) { // Dressing HUD
 
 draw_sprite_stretched(spr_gameframe_caption,1,0,0,SCREEN_WIDTH,SCREEN_HEIGHT)
 
-scr_sSupreme_set(,,,0)
+scr_multiUse_set(,,,0)
 draw_sprite_ext(sprite_index,image_index,SCREEN_WIDTH/2,SCREEN_HEIGHT/2,5,5,0,c_white,1);
-scr_sSupreme_reset()
+scr_multiUse_reset()
 
 if(is_string(curentPalette)){ // Display Custom Colors
 	if(dresserMenu > 0) {

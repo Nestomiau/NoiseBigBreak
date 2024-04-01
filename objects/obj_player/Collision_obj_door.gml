@@ -9,9 +9,7 @@ if(key_up2 && grounded && state != states.slide && state != states.dresser && st
 	movespeed = 0
 	sprite_index = spr_enterdoor
 	image_index = 0
-	
-	x = lerp(x, other.x+16, 0.5);
-	
+	x = lerp(x, other.x+16, 0.5)
 	if !instance_exists(obj_fadeout)
-		instance_create(0, 0, obj_fadeout);
+		instance_create(0, 0, obj_fadeout)
 }

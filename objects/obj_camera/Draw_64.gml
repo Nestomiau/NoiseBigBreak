@@ -12,6 +12,6 @@ else if(plr.movespeed > 16 && plr.state != states.slide)
 else
 	sprite_index = plr.spr_tvIdle
 
-scr_sSupreme_set(1,plr.inverted,plr.plrPal)
+scr_multiUse_set(1,plr.inverted,plr.plrPal)
 draw_sprite(sprite_index,image_index,1250,20)
-scr_sSupreme_reset()
+scr_multiUse_reset()

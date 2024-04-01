@@ -61,23 +61,10 @@ function check_slope(slope_object)
 	}
 	return false;
 }
-function check_slope_at(_x, _y)
-{
-	var old_x = x;
-	var old_y = y;
-	x = _x;
-	y = _y;
-	
-	if check_slope(obj_slope)
-	{
-		x = old_x;
-		y = old_y;
-		return true;
-	}
-	
-	x = old_x;
-	y = old_y;
-	return false;
+function check_slope_at(_x, _y) {
+	var old_x = x; var old_y = y; x = _x; y = _y	
+	if check_slope(obj_slope){x = old_x; y = old_y; return true}	
+	x = old_x; y = old_y; return false
 }
 function scr_solid_slope(_x, _y)
 {
@@ -114,8 +101,7 @@ function scr_solid_player(_x, _y)
 		var b = ds_list_find_value(global.instancelist, i);
 		if (instance_exists(b))
 		{
-			switch (b.object_index)
-			{
+			switch (b.object_index) {
 				default:
 					_collided = true;
 			}

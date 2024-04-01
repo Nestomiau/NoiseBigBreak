@@ -29,7 +29,7 @@ function scr_noise_normal(){
 			if image_index >= image_number - 1
 				sprite_index = spr_mach2;
 		}
-		else if movespeed == 0
+		else if (movespeed == 0)
 			sprite_index = spr_idle;
 		
 		if movespeed < 12
@@ -76,7 +76,7 @@ function scr_noise_normal(){
 				image_index = 0;
 				sprite_index = spr_mach1;
 			}
-			if image_index >= image_number - 1 && (sprite_index == spr_mach1 or sprite_index == spr_runland or sprite_index == spr_turn)
+			if image_index >= image_number - 1 && (sprite_index == spr_mach1 || sprite_index == spr_runland || sprite_index == spr_turn)
 				sprite_index = spr_mach2;
 			
 			if mach2 < mach2_time && movespeed <= 12
@@ -263,102 +263,91 @@ function scr_noise_jump(){
 }
 
 function scr_noise_wallslide() {
-		movespeed = 0;
+	movespeed = 0
 		
-		if ++part_time >= 8
-		{
-			part_time = 0;
-			create_particle(x + xscale * 10, y, spr_cloudeffect);
-		}
-		
-		if grounded
-		{
-			sound_play_3d(sfx_land, x, y);
-			create_particle(x, y, spr_landcloud);
-			state = states.normal;
-		}
-		vsp = min(vsp, 8);
-		
-		sprite_index = vsp > 0 ? spr_wallslidedown : spr_wallslide;
-		
-		if !place_meeting(x + xscale, y, obj_solid) or move == -xscale
-		{
-			sprite_index = spr_fall;
-			image_index = 0;
-			state = states.jump;
-		}
-		else if input_buffer_jump
-		{
-			input_buffer_jump = 0;
-			sound_play_3d(sfx_jump, x, y);
-			
-			xscale *= -1;
-			movespeed = 10;
-			state = states.jump;
-			sprite_index = spr_bounce;
-			vsp = -14;
-		}
+	if (++part_time >= 8){
+		part_time = 0
+		create_particle(x + xscale * 10, y, spr_cloudeffect)
+	}
+	
+	if (grounded) {
+		sound_play_3d(sfx_land, x, y)
+		create_particle(x, y, spr_landcloud)
+		state = states.normal
+	}
+	vsp = min(vsp, 8)
+	sprite_index = vsp > 0 ? spr_wallslidedown : spr_wallslide;
+	if (!place_meeting(x + xscale, y, obj_solid) || move == -xscale) {
+		sprite_index = spr_fall;
+		image_index = 0;
+		state = states.jump;
+	}else if (input_buffer_jump){
+		input_buffer_jump = 0
+		sound_play_3d(sfx_jump, x, y)
+		xscale *= -1
+		movespeed = 10
+		state = states.jump
+		sprite_index = spr_bounce
+		vsp = -14
+	}
 }
 
 function scr_noise_slide(){
-	hsp = xscale * movespeed;
-	if (place_meeting(x + sign(hsp), y, obj_solid) or scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_destroyable)
+	//if(sprite_index != spr_dive)
+		hsp = xscale * movespeed
+	if ((place_meeting(x + sign(hsp), y, obj_solid) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_destroyable))
 		movespeed = 0;
 	
 	if (sprite_index == spr_forkstart && image_index >= image_number - 1)
-		sprite_index = spr_crouchslip;
-	if(sprite_index == spr_dive && movespeed < 19) {
-		if(movespeed < 16)
-			movespeed += .4
-		else
-			movespeed += .02
-	}
+		sprite_index = spr_crouchslip
+	if(sprite_index == spr_dive && movespeed < 19) {movespeed += (movespeed < 16)?.4:0.2}
 	
 	if (grounded){
 		if (sprite_index == spr_dive) {
-			sound_play_3d(sfx_land, x, y);
+			sound_play_3d(sfx_land, x, y)
 			
-			state = states.normal;
-			sprite_index = spr_runland;
-			image_index = 0;
+			state = states.normal
+			sprite_index = spr_runland
+			image_index = 0
 		}else {
 			if (++part_time >= 16) {
-				part_time = 0;
-				create_particle(x, y, spr_dashcloud, xscale);
+				part_time = 0
+				create_particle(x, y, spr_dashcloud, xscale)
 			}
-			movespeed = Approach(movespeed, 0, 0.1);
+			movespeed = Approach(movespeed, 0, 0.1)
 		
-			if movespeed <= 0
-				state = states.normal;
+			if (movespeed <= 0) {
+				if(sprite_index == spr_rolldh && check_slope_at(x,y+1)) {
+					xscale*=-1
+					movespeed=0.2
+				}else
+					state = states.normal
+			}
 		
 			if (input_buffer_jump) {
-				input_buffer_jump = 0;
-				sound_play_3d(sfx_jump, x, y);
-				create_particle(x, y, spr_highjumpcloud2);
+				input_buffer_jump = 0
+				sound_play_3d(sfx_jump, x, y)
+				create_particle(x, y, spr_highjumpcloud2)
 			
-				jumpstop = false;
-				sprite_index = spr_longjump;
-				image_index = 0;
-				state = states.jump;
-				vsp = -14;
-				jumpclouds = 12;
+				jumpstop = false
+				sprite_index = spr_longjump
+				image_index = 0
+				state = states.jump
+				vsp = -14
+				jumpclouds = 12
 			}
-			scr_player_addslopemomentum(0.4, 0.2);
+			var _a = (sprite_index == spr_rolldh)?[.6,-1,25]:[.2,12,19]
+			scr_player_addslopemomentum(.4,_a[0],_a[1],_a[2])
 		}
 	}else if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + hsp, y, obj_destroyable)) {
-		sound_play_3d(sfx_wallslide, x, y);
-		
-		state = states.wallslide;
-		sprite_index = spr_wallslide;
+		sound_play_3d(sfx_wallslide, x, y)
+		state = states.wallslide
+		sprite_index = spr_wallslide
 	}
 }
 
 function scr_noise_hurt() {
-	if (grounded && vsp >= 0) {
-		state = states.normal;
-		movespeed = 0;
-		inv = 80;
-	}
+	if (grounded && vsp >= 0) {state = states.normal;movespeed = 0;inv = 80;}
 }
 
 function scr_noise_dresser() {

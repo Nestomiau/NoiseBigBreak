@@ -128,8 +128,8 @@ function scr_collide_player()
 		repeat (abs(target_x - x)) {
 			// slopes (find a way to optimize them)
 			var steepness = 4;
-			with obj_convexslope
-				if (distance_to_object(other) < 1 )
+			with (obj_convexslope)
+				if (distance_to_object(other)<1)
 					steepness = max(image_yscale * 5, 12);
 			
 			for (var k = 1; k <= steepness; ++k) {
