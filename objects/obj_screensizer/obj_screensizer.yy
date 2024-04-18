@@ -10,8 +10,8 @@
   "name":"obj_screensizer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Internal",
-    "path":"folders/Objects/Internal.yy",
+    "name":"Controllers",
+    "path":"folders/Objects/Internal/Controllers.yy",
   },
   "parentObjectId":null,
   "persistent":true,

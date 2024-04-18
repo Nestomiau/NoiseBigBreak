@@ -1,11 +1,7 @@
 var _O = []
 var _drawL = []
 var _i = 0
-repeat(instance_number(obj_destroyable)){
-	_O[_i] = instance_find(obj_destroyable,_i)
-	_i++
-}
-_i = 0
+with(obj_destroyable){array_push(_O,id)}
 while(array_length(_O)!=array_length(_drawL)){
 	var _val = [99999999,-1]
 	var __i = 0

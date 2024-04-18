@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"mu_nOTest1cNoi_loop",
+  "%Name":"mu_sundogFunk_loop",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,16 +10,16 @@
   "compression":0,
   "conversionMode":0,
   "duration":160.1,
-  "name":"mu_nOTest1cNoi_loop",
+  "name":"mu_sundogFunk_loop",
   "parent":{
-    "name":"noiseOrangeTest1c-Noi",
-    "path":"folders/Sounds/Music/noiseOrangeTest1c-Noi.yy",
+    "name":"Sundog Funk",
+    "path":"folders/Sounds/Music/Sundog Funk.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"mu_nOTest1cNoi_loop.wav",
+  "soundFile":"mu_sundogFunk_loop.wav",
   "type":0,
   "volume":1.0,
 }

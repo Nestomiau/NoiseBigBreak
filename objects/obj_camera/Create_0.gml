@@ -13,5 +13,3 @@ global.fnt_smallfont = font_add_sprite_ext(spr_smallfont1,"ABCDEFGHIJKLMNOPQRSTU
 global.fnt_counter = font_add_sprite_ext(spr_counter,"9876543210: LAP",0,-40)
 global.dressing = 0
 global.drawTV = 1
-
-//pal_swap_init_system(shd_pal_swapper,shd_pal_html_sprite,shd_pal_html_surface)
