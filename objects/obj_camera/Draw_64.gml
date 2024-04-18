@@ -1,6 +1,6 @@
 live_auto_call
 
-if(!global.drawTV || global.dressing || instance_exists(plr))
+if(!global.drawTV || global.dressing || !instance_exists(plr))
 	exit
 	
 if(plr.inv > 0 || plr.state == states.hurt)
