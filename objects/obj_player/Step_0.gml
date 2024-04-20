@@ -78,19 +78,20 @@ repeat(5){
 }
 if(check_slope_at(x,y+1)) {
 	var _inst = instance_place(x,y+1,obj_slope)
-	if(_inst.object_index==obj_slideSlope&&state!=states.wallslide) {
-		if(sprite_index != spr_rolldh){
-			vsp = 0
-			state = states.slide 
-			sprite_index = spr_rolldh
-		}
+	if(sprite_index==spr_rolldh){
+		if(_inst){angle=45*sign(_inst.image_xscale)}
+		else{angle=0}
 	}
-	if(sprite_index == spr_rolldh){angle = 45*sign(_inst.image_xscale)}
+	else if(_inst.object_index==obj_slideSlope&&state!=states.wallslide&&state!=states.actor&&state!=states.dead) {
+		vsp=0
+		state=states.slide 
+		sprite_index =spr_rolldh
+	}
 }
-if(sprite_index != spr_rolldh || !instance_place(x,y-1,obj_slope)){angle = 0}
+if(sprite_index!=spr_rolldh||!instance_place(x,y-1,obj_slope)){angle=0}
 if (mouse_check_button_pressed(mb_left)) {
-	x = mouse_x
-	y = mouse_y
+	x=mouse_x
+	y=mouse_y
 }
 if(sprite_index != spr_rolldh) {
 	if(state==states.slide&&sprite_index!=spr_dive){mask_index=spr_player_maskdown}
@@ -104,8 +105,8 @@ if(_baddie){
 		if (global.collect>=global.collectHigh) {
 			if(hp<5) {
 				hp++
-				getLife = 180
-				collectHigh+=20
+				getLife=180
+				global.collectHigh+=20
 			}
 		}
 		instance_destroy(_baddie)

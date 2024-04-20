@@ -92,8 +92,8 @@
   "optionsFile":"options.json",
   "packageId":"",
   "parent":{
-    "name":"gameframe",
-    "path":"folders/Extensions/gameframe.yy",
+    "name":"Gameframe",
+    "path":"folders/Extensions/Gameframe.yy",
   },
   "productId":"",
   "resourceType":"GMExtension",
