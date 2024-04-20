@@ -34,6 +34,7 @@
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Paths","folderPath":"folders/Paths.yy","name":"Paths","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"group1","folderPath":"folders/Rooms/group1.yy","name":"group1","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Harroz","folderPath":"folders/Rooms/Harroz.yy","name":"Harroz","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"JunkBeach","folderPath":"folders/Rooms/JunkBeach.yy","name":"JunkBeach","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -134,6 +135,7 @@
     {"id":{"name":"harroz_4","path":"rooms/harroz_4/harroz_4.yy",},},
     {"id":{"name":"Initroom","path":"rooms/Initroom/Initroom.yy",},},
     {"id":{"name":"rm_template","path":"rooms/rm_template/rm_template.yy",},},
+    {"id":{"name":"harrozNEW_1","path":"rooms/harrozNEW_1/harrozNEW_1.yy",},},
     {"id":{"name":"testroom_1","path":"rooms/testroom_1/testroom_1.yy",},},
     {"id":{"name":"testroom_2","path":"rooms/testroom_2/testroom_2.yy",},},
     {"id":{"name":"gameframe_macros","path":"scripts/gameframe_macros/gameframe_macros.yy",},},
@@ -289,6 +291,7 @@
     {"roomId":{"name":"harroz_2","path":"rooms/harroz_2/harroz_2.yy",},},
     {"roomId":{"name":"harroz_3","path":"rooms/harroz_3/harroz_3.yy",},},
     {"roomId":{"name":"harroz_4","path":"rooms/harroz_4/harroz_4.yy",},},
+    {"roomId":{"name":"harrozNEW_1","path":"rooms/harrozNEW_1/harrozNEW_1.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

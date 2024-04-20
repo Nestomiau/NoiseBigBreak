@@ -17,17 +17,3 @@ if((state==states.normal||state==states.mach)&&canScare){
 
 	}
 }
-
-if(instance_place(x,y,obj_player)){
-	if(obj_player.movespeed>scaredSpd||obj_player.state==states.slide){
-		global.collect+=dieValue
-		if (global.collect>=global.collectHigh) {
-			if(obj_player.hp < 5) {
-				obj_player.hp++;
-				obj_player.getLife = 180
-				global.collectHigh+=20
-			}
-		}
-		instance_destroy()
-	}
-}

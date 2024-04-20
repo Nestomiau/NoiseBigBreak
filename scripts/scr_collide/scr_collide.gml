@@ -1,5 +1,5 @@
 function scr_collide() {
-	grounded = false;
+	grounded=false;
 	
 	// vertical
 	var vsp_final = vsp + vsp_carry;
@@ -31,7 +31,7 @@ function scr_collide() {
 	
 	// horizontal
 	var hsp_final = hsp + hsp_carry;
-	hsp_carry = 0;
+	hsp_carry=0;
 	var target_x = round(x + hsp_final);
 	var bbox_size_x = bbox_right - bbox_left;
 	t = abs(target_x - x) / bbox_size_x;
@@ -67,11 +67,11 @@ function scr_collide() {
 	
 	// gravity
 	if (vsp < 10)
-		vsp += grav;
+		vsp+=grav;
 	
 	// on ground check
 	if vsp >= 0
-		grounded |= scr_solid(x, y + 1);
+		grounded|=scr_solid(x, y + 1);
 }
 function scr_collide_player()
 {

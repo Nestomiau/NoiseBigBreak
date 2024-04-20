@@ -1,1 +1,1 @@
-targetRoom = harroz_1
+targetRoom = harrozNEW_1
