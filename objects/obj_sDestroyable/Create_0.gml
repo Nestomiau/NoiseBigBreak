@@ -1,2 +1,2 @@
 event_inherited()
-particle.amount = 3
+particle.amount=3

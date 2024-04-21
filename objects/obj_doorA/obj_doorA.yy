@@ -8,8 +8,8 @@
     {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_doorX","path":"objects/obj_doorX/obj_doorX.yy",},"propertyId":{"name":"door","path":"objects/obj_doorX/obj_doorX.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"A",},
   ],
   "parent":{
-    "name":"Doors",
-    "path":"folders/Objects/Level Desing/Doors.yy",
+    "name":"Warps",
+    "path":"folders/Objects/Level Desing/Warps.yy",
   },
   "parentObjectId":{
     "name":"obj_doorX",

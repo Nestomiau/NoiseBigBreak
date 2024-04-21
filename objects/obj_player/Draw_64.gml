@@ -4,7 +4,7 @@ if(global.dressing) { // Dressing HUD
 
 draw_sprite_stretched(spr_gameframe_caption,1,0,0,SCREEN_WIDTH,SCREEN_HEIGHT)
 
-scr_multiUse_set(,,,0)
+scr_multiUse_set(1,plr.inverted,plr.plrPal)
 draw_sprite_ext(sprite_index,image_index,SCREEN_WIDTH/2,SCREEN_HEIGHT/2,5,5,0,c_white,1);
 scr_multiUse_reset()
 
@@ -20,11 +20,4 @@ if(is_string(curentPalette)){ // Display Custom Colors
 			draw_sprite_ext(spr_dresserSelect,0,SCREEN_WIDTH/2-_crd[customizing],SCREEN_HEIGHT/2+250,2,2,0,c_white,1)
 	}
 }
-}else { // Normal HUD
-	
-for(var i = 0; i < max(hp, 4); i++)
-	draw_sprite_ext(spr_healthHUD, 0, 32 + 78 * i, 16, 1, 1, 0, i >= hp ? c_black : c_white, 1);
-draw_healthbar(32, 112, 288, 128, (movespeed / 19) * 100, c_black, c_blue, c_red, 0, true, true);
-draw_set_font(global.fnt_counter)
-draw_text(96,158,global.collect)
 }

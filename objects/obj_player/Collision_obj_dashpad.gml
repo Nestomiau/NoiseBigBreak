@@ -1,6 +1,6 @@
 live_auto_call
 
-if(state == states.dead || state == states.dresser || other.state)
+if(state==states.dresser||state==states.dead ||state==states.actor||other.state)
 	exit
 
 x=other.x

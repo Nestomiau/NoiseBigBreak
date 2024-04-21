@@ -1,7 +1,6 @@
 live_auto_call
 
-if (instance_exists(plr)) {
-	
+if (instance_exists(plr)) {	
 	x=plr.x-CAMW/2
 	y=plr.y-CAMH/2
 	if (plr.object_index=obj_player) {

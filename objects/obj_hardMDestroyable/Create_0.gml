@@ -1,3 +1,2 @@
-event_inherited();
-
-destroyspeed = 25
+event_inherited()
+destroyspeed=25

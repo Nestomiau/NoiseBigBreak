@@ -98,7 +98,7 @@ if(sprite_index != spr_rolldh) {
 	else{mask_index=spr_player_mask}
 }else {mask_index=(key_down)?spr_player_maskdown: spr_player_mask}
 
-var _baddie = instance_place(x+hsp,y,obj_baddie)
+var _baddie = instance_place(x+(image_xscale*25)+hsp,y,obj_baddie)
 if(_baddie){
 	if(movespeed>_baddie.scaredSpd||state==states.slide){
 		global.collect+=_baddie.dieValue

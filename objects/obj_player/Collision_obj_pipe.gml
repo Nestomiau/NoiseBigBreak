@@ -8,7 +8,7 @@ if(other.send) {
 	movespeed=0
 	vsp=0
 	hsp=0
-	var _s = other.force
+	var _s=other.force
 	switch(other.dir){
 	case vk_up : vsp=-_s break
 	case vk_down : vsp=_s break
@@ -24,7 +24,7 @@ if(other.send) {
 		if(movespeed)
 			xscale=sign(hsp)
 	}
-}else if(state == states.actor || !other.type) {
+}else if(state==states.actor||!other.type) {
 	x=lerp(x,other.x,0.3)
 	y=lerp(y,other.y,0.3)
 	hsp=0

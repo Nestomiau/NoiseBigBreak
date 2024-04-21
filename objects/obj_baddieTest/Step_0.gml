@@ -12,9 +12,8 @@ switch (state){
 		if(hsp!=0)
 			image_xscale=sign(hsp)
 		mask_index=spr_player_maskdown
-		if(instance_place(x+hsp+(image_xscale*50),y-8,obj_player))
+		if(instance_place(x+hsp+(image_xscale*10),y-8,obj_player))
 			with(obj_player){
-				grounded=0
 				scr_hurtplayer()
 			}
 		mask_index=spr_player_mask

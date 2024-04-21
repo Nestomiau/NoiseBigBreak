@@ -9,8 +9,8 @@
   "name":"obj_noisette_point",
   "overriddenProperties":[],
   "parent":{
-    "name":"Internal",
-    "path":"folders/Objects/Internal.yy",
+    "name":"Controllers",
+    "path":"folders/Objects/Internal/Controllers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

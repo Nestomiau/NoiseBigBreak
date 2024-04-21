@@ -1,6 +1,6 @@
 live_auto_call
 
-if(state == states.dresser || state == states.dead || state == states.actor)
+if(state==states.dresser||state==states.dead ||state==states.actor)
 	exit
 
 var dir = point_direction(other.x, other.y, x, y)

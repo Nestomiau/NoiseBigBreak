@@ -1,3 +1,3 @@
 event_inherited()
-isMetal = 0
+isMetal=0
 
