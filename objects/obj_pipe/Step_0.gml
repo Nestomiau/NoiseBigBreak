@@ -6,3 +6,6 @@ if(cooldown <= 0 && plr != noone) {
 		plr = noone
 	}
 }
+
+image_index=type
+
