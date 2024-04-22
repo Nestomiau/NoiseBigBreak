@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_MultiUse",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Shader",
+    "path":"folders/Scripts/Shader.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

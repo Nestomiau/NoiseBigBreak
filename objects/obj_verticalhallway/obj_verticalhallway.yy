@@ -9,8 +9,8 @@
   "name":"obj_verticalhallway",
   "overriddenProperties":[],
   "parent":{
-    "name":"Position Doors",
-    "path":"folders/Objects/Level Desing/Warps/Position Doors.yy",
+    "name":"Warps",
+    "path":"folders/Objects/Level Desing/Warps.yy",
   },
   "parentObjectId":null,
   "persistent":false,

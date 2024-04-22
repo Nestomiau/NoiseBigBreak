@@ -1,6 +1,6 @@
 live_auto_call
 
-scr_multiUse_set(1,inverted,plrPal)
+pSwap_set(spr_palette,curentPalette)
 draw_sprite_ext(sprite_index, -1, x, y, image_xscale * xscale, image_yscale * yscale, angle, image_blend, image_alpha);
-scr_multiUse_reset()
+scr_shaders_reset()
 draw_sprite(mask_index,0,x,y)

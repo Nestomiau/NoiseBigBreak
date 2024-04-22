@@ -12,9 +12,10 @@ else if(plr.movespeed > 16 && plr.state != states.slide)
 else
 	sprite_index = plr.spr_tvIdle
 
-scr_multiUse_set(1,plr.inverted,plr.plrPal) // Draw TV
+pSwap_set(plr.spr_palette,plr.curentPalette)// Draw TV
 draw_sprite(sprite_index,image_index,1250,20)
-scr_multiUse_reset()
+scr_shaders_reset()
+draw_sprite(spr_expr_frontTV,0,1250,20) // Draw TV Front
 
 for(var i = 0; i < max(plr.hp, 4); i++)
 	draw_sprite_ext(spr_healthHUD, 0, 32 + 78 * i, 16, 1, 1, 0, i >= plr.hp ? c_black : c_white, 1);

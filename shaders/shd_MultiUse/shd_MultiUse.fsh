@@ -47,7 +47,7 @@ void gles_custompal(inout vec4 sample) {
 
 void gles_invertcolor(inout vec4 sample){
 	if(i_invert == 1)
-		sample = vec4(1.0-sample.r,1.0-sample.g,1.0-sample.b,sample.a);;
+		sample = vec4(1.0-sample.r,1.0-sample.g,1.0-sample.b,sample.a);
 }
 void main() {
 	vec4 sample = texture2D( gm_BaseTexture, v_vTexcoord);

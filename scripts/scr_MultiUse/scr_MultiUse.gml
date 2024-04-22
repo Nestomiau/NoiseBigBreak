@@ -43,6 +43,3 @@ function scr_multiUse_colorS(_v1,_v2,_idx){ //Set Colors
 	shader_set_uniform_f_array(_i,_r2)
 	
 }
-function scr_multiUse_reset(){ //I Just Copied This From RPS
-	if(shader_current()!=-1){shader_reset()}
-}
