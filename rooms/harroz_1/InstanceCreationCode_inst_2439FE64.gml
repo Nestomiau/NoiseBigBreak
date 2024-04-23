@@ -1,2 +1,2 @@
-targetDoor="A"
+targetDoor="C"
 targetRoom=room

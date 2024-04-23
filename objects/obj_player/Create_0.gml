@@ -102,56 +102,56 @@ set_machsnd = function(sound) {
 }
 
 charSPR = function(_char) {
-	var _surfSize=[1,1]
 	switch(_char){
 		case "N" :
 			//Default Sprites
-			spr_wallslide = spr_player_wallslide
-			spr_wallslidedown = spr_player_wallslidedown
-			spr_stop = spr_player_stop
-			spr_idle = spr_player_idle
-			spr_turn = spr_player_turn
-			spr_mach1 =spr_player_mach1
-			spr_mach2 = spr_player_mach2
-			spr_mach2jump = spr_player_mach2jump
-			spr_mach2fall = spr_player_mach2fall
-			spr_mach3 = spr_player_mach3
-			spr_runland = spr_player_runland
-			spr_stopping = spr_player_stopping
-			spr_glidejumpstart = spr_player_glidejumpstart
-			spr_jump = spr_player_jump
-			spr_fall = spr_player_fall
-			spr_forkstart = spr_player_forkstart
-			spr_backflip = spr_player_backflip
-			spr_backflipfall = spr_player_backflipfall
-			spr_glidejump = spr_player_glidejump
-			spr_glidefallstart = spr_player_glidefallstart
-			spr_glidefall = spr_player_glidefall
-			spr_bounce = spr_player_bounce
-			spr_dive = spr_player_dive
-			spr_crouchslip = spr_player_crouchslip
-			spr_longjump = spr_player_mach2jump
-			spr_longjumpend = spr_player_longjumpend
-			spr_hurt = spr_player_hurt
-			spr_enterdoor = spr_player_enterdoor
-			spr_dies = spr_player_dies
-			spr_exitdoor = spr_player_exitdoor
-			spr_rolldh = spr_player_rolldh
+			spr_wallslide=spr_player_wallslide
+			spr_wallslidedown=spr_player_wallslidedown
+			spr_stop=spr_player_stop
+			spr_idle=spr_player_idle
+			spr_turn=spr_player_turn
+			spr_mach1=spr_player_mach1
+			spr_mach2=spr_player_mach2
+			spr_mach2jump=spr_player_mach2jump
+			spr_mach2fall=spr_player_mach2fall
+			spr_mach3=spr_player_mach3
+			spr_runland=spr_player_runland
+			spr_stopping=spr_player_stopping
+			spr_glidejumpstart=spr_player_glidejumpstart
+			spr_jump=spr_player_jump
+			spr_fall=spr_player_fall
+			spr_forkstart=spr_player_forkstart
+			spr_backflip=spr_player_backflip
+			spr_backflipfall=spr_player_backflipfall
+			spr_glidejump=spr_player_glidejump
+			spr_glidefallstart=spr_player_glidefallstart
+			spr_glidefall=spr_player_glidefall
+			spr_bounce=spr_player_bounce
+			spr_dive=spr_player_dive
+			spr_crouchslip=spr_player_crouchslip
+			spr_longjump=spr_player_mach2jump
+			spr_longjumpend=spr_player_longjumpend
+			spr_hurt=spr_player_hurt
+			spr_enterdoor=spr_player_enterdoor
+			spr_dies=spr_player_dies
+			spr_exitdoor=spr_player_exitdoor
+			spr_rolldh=spr_player_rolldh
+			spr_entergate=spr_player_entergate
 			
-			// TV Sprites
-			spr_tvMach3 = spr_expr_mach3
-			spr_tvHurt = spr_expr_hurt
-			spr_tvIdle = spr_expr_idle
-			spr_tvLaugh = spr_expr_laugh
+			//TV Sprites
+			spr_tvMach3=spr_expr_mach3
+			spr_tvHurt=spr_expr_hurt
+			spr_tvIdle=spr_expr_idle
+			spr_tvLaugh=spr_expr_laugh
 			
 			// Draw Relacted
 			curentPalette=1
 			spr_palette=spr_player_palette
 			
 			//STATES
-			var _funcName = "noise"
-			var _i = 0
-			var _name = ["normal","jump","wallslide","slide","hurt"]
+			var _funcName="noise"
+			var _i=0
+			var _name=["normal","jump","wallslide","slide","hurt"]
 			repeat(array_length(_name)) {
 				variable_instance_set(id,$"state_{_name[_i]}",asset_get_index($"scr_{_funcName}_{_name[_i]}"))
 				_i++

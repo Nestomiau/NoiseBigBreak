@@ -1,24 +1,24 @@
 live_auto_call
 
 var door_obj=noone
-with (obj_doorX) {
+with(obj_doorX) {
 	if (door==other.targetDoor) {
 		door_obj=id
 		break
 	}
 }
 
-if (door_obj) {
-	x = door_obj.x + 16;
-	y = door_obj.y - 14;
+if(door_obj) {
+	x=door_obj.x+16
+	y=door_obj.y-14
 	
-	var hallway = instance_place(x, y, obj_hallway);
+	var hallway=instance_place(x, y, obj_hallway)
 	if (hallway)
-		x = hallway.x + hallway.sprite_width + (-sign(hallway.image_xscale) * 200);
+		x=hallway.x+hallway.sprite_width+(-sign(hallway.image_xscale)*200)
 	
-	hallway = instance_place(x, y, obj_verticalhallway);
-	if (hallway) {
-		trace(verticalpos);
+	hallway=instance_place(x, y, obj_verticalhallway)
+	if(hallway) {
+		trace(verticalpos)
 		
 		x = hallway.x + (hallway.sprite_width * verticalpos);
 		var bbox_size = abs(bbox_right - bbox_left);
@@ -42,7 +42,7 @@ if (door_obj) {
 	}
 }
 
-if(sprite_index == spr_enterdoor)
-	sprite_index = spr_exitdoor
+if(sprite_index==spr_enterdoor||sprite_index==spr_entergate)
+	sprite_index=spr_exitdoor
 
-instance_create(x, y, obj_noisette);
+instance_create(x, y, obj_noisette)
