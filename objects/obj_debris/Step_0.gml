@@ -1,2 +1,2 @@
-if vspeed >= 10
-	gravity = 0;
+if (vspeed>=10)
+	gravity = 0

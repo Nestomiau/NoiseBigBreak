@@ -336,7 +336,7 @@
   "name":"harrozOLD_2",
   "parent":{
     "name":"Harroz OLD",
-    "path":"folders/Rooms/Harroz OLD.yy",
+    "path":"folders/Rooms/Old/Harroz OLD.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -61,8 +61,8 @@
   ],
   "name":"testroom_2",
   "parent":{
-    "name":"JunkBeach",
-    "path":"folders/Rooms/JunkBeach.yy",
+    "name":"JunkBeach OLD",
+    "path":"folders/Rooms/Old/JunkBeach OLD.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

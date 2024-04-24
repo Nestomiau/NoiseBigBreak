@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.881224,
   "name":"sfx_mach2",
   "parent":{
     "name":"Player",

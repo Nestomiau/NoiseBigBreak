@@ -15,7 +15,6 @@ scaredDist=500
 scaredSpd=12
 scaredJump=-3
 grounded=0
-canScare=1
 killable=1
 dieValue=5
 accel=.3
