@@ -38,9 +38,10 @@ customizing = 0
 deadCooldown = 240
 ofScreen=0
 plrPal = 0
-fall = 1
-angle = 0
-collide = 1
+fall=1
+angle=0
+collide=1
+sPalette=surface_create(1,1)
 
 input_buffer_jump = 0
 
@@ -145,8 +146,10 @@ charSPR = function(_char) {
 			spr_tvLaugh=spr_expr_laugh
 			
 			// Draw Relacted
-			curentPalette=1
 			spr_palette=spr_player_palette
+			palList=[["UnNoiseletted",0],["The Noise",4],["The Doise",5],["Mr. Orange",6],["El Chico",7],["Hardoween Classic",8],["Mr Moise",9],["Gronch",10],["Silent",11],["Black Clothes",12],["Shitty Noises",13],["Oddly Sweet",14],["Back into the 30s",16],["Frostbiten",17],["esioN ehT",18],["Triple Doble",19],["Actually Black",20],["MY EYES",21],["Gunose",22],["Loise",23],["Foise",24],["The Noise 2023",25],["Almost Naked",26],["",27],["Pissed Off",28],["Palennoise",29],["Fiore",30]]
+			cPalfList=1
+			curentPalette=palList[cPalfList][1]
 			
 			//STATES
 			var _funcName="noise"

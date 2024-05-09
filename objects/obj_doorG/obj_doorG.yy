@@ -5,7 +5,7 @@
   "managed":true,
   "name":"obj_doorG",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"obj_doorX","path":"objects/obj_doorX/obj_doorX.yy",},"propertyId":{"name":"door","path":"objects/obj_doorX/obj_doorX.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"G",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_doorX","path":"objects/obj_doorX/obj_doorX.yy",},"propertyId":{"name":"door","path":"objects/obj_doorX/obj_doorX.yy",},"resource":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"G",},
   ],
   "parent":{
     "name":"Position Doors",

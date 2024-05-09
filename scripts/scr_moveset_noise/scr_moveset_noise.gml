@@ -264,7 +264,7 @@ function scr_noise_jump(){
 
 function scr_noise_wallslide() {
 	movespeed = 0
-		
+	
 	if (++part_time >= 8){
 		part_time = 0
 		create_particle(x + xscale * 10, y, spr_cloudeffect)
@@ -293,8 +293,7 @@ function scr_noise_wallslide() {
 }
 
 function scr_noise_slide(){
-	//if(sprite_index != spr_dive)
-		hsp = xscale * movespeed
+	hsp=xscale*movespeed
 	if ((place_meeting(x + sign(hsp), y, obj_solid) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_destroyable))
 		movespeed = 0;
 	
@@ -347,17 +346,22 @@ function scr_noise_slide(){
 }
 
 function scr_noise_hurt() {
-	if (grounded && vsp >= 0) {state = states.normal;movespeed = 0;inv = 80;}
+	if (grounded&&vsp>=0) {
+		state=states.normal
+		movespeed=0
+		inv=80
+	}
 }
 
 function scr_noise_dresser() {
 	if(abs(move)) { 
-		if(-key_left2&&curentPalette>0){
-			curentPalette--
+		if(-key_left2&&cPalfList>0){
+			cPalfList--
 		}
-		if (key_right2&&curentPalette<sprite_get_width(spr_palette)-1){
-			curentPalette++
+		if (key_right2&&cPalfList<array_length(palList)-1){
+			cPalfList++
 		}
+		curentPalette=palList[cPalfList][1]
 	}
 	if(key_jump){
 		state=states.normal
@@ -370,6 +374,6 @@ function scr_noise_dead() {
 	movespeed*=0.96
 	if(ofScreen)
 		deadCooldown--
-	if(deadCooldown <= 0)
+	if(deadCooldown<=0)
 		game_restart()
 }
