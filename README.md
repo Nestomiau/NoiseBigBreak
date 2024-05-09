@@ -12,7 +12,7 @@ Original Recreation - Loypoll\
 Mod Owner - Arroz
 ### OC Credits
 Gunose - Arroz Felino\
-The Doise - Robby1scool\
+The Doise - [Robby1scool](https://www.youtube.com/@robby1scool)\
 Loise - [peoplearecool453](https://scratch.mit.edu/users/peoplearecool453/)\
 Foise - [AACC_ELyt](https://scratch.mit.edu/users/AACC_ELyt/)\
 The Noise 2023 - [MarioLoverCHAT](https://scratch.mit.edu/users/MarioLoverCHAT/_})
