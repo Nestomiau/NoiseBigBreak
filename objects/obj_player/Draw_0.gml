@@ -5,6 +5,3 @@ draw_sprite_ext(sprite_index,-1,x,y,image_xscale*xscale,image_yscale*yscale,angl
 scr_shaders_reset()
 if(global.isDebug&&global.debugConfig.plrshowHitbox)
 	draw_sprite(mask_index,0,x,y)
-
-
-draw_surface(sPalette,0,0)

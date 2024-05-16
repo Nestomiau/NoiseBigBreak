@@ -250,6 +250,7 @@
     {"id":{"name":"spr_healthHUD","path":"sprites/spr_healthHUD/spr_healthHUD.yy",},},
     {"id":{"name":"spr_highjumpcloud2","path":"sprites/spr_highjumpcloud2/spr_highjumpcloud2.yy",},},
     {"id":{"name":"spr_ico","path":"sprites/spr_ico/spr_ico.yy",},},
+    {"id":{"name":"spr_icoALT","path":"sprites/spr_icoALT/spr_icoALT.yy",},},
     {"id":{"name":"spr_icoBIG","path":"sprites/spr_icoBIG/spr_icoBIG.yy",},},
     {"id":{"name":"spr_knightpoo","path":"sprites/spr_knightpoo/spr_knightpoo.yy",},},
     {"id":{"name":"spr_landcloud","path":"sprites/spr_landcloud/spr_landcloud.yy",},},
