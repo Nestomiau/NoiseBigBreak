@@ -5,7 +5,7 @@ This Mod is NOT supposed to be fully accurate to Noise's Big Break(far from it),
 
 Also you can use any of the recreated stuff from this mod, they are on the [assets/recreation](https://github.com/Nestomiau/ArrozBigBreak/tree/main/assets/recreations) folder.
 
-And if you wanna open the project in GameMaker it is for Version 4.
+And if you wanna open the project in GameMaker it is for Version 2024.4
 
 ## Credits
 Original Recreation - Loypoll\
