@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"gameframe",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"gameframe",
-  "parent":{
-    "name":"Gameframe",
-    "path":"folders/Extensions/Gameframe.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "gameframe",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "gameframe",
+    "path": "folders/Extensions/gameframe.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

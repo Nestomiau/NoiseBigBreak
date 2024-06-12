@@ -1,2 +1,2 @@
-gotowardsplayer = false
-movespeed = 5
+gotowardsplayer = false;
+movespeed = 5;

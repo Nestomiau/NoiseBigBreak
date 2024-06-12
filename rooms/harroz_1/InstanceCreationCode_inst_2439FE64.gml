@@ -1,2 +1,0 @@
-targetDoor="C"
-targetRoom=room

@@ -1,7 +1,8 @@
-live_auto_call
+live_auto_call;
 
 event_inherited();
-switch (state) {
+switch state
+{
 	case 1:
 		player.state = states.actor;
 		player.sprite_index = spr_player_mach1;
@@ -16,16 +17,17 @@ switch (state) {
 		break;
 	
 	case 2:
-		if (player.image_index >= player.image_number - 1) {
+		if player.image_index >= player.image_number - 1
+		{
 			player.mach2 = 50;
-			player.movespeed = force;
+			player.movespeed = 16;
 			player.state = states.normal;
 			state = 3;
 		}
 		break;
 	
 	case 3:
-		if (!place_meeting(x, y, player))
+		if !place_meeting(x, y, player)
 			state = 0;
 		break;
 }

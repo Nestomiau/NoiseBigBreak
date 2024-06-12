@@ -1,11 +1,14 @@
 function Approach(a, b, amount)
 {
 	// https://www.youtube.com/watch?v=2FroAhEsuE8
-	if (a < b) {
+	if (a < b)
+	{
 		a += amount;
 		if (a > b)
 			return b;
-	}else {
+	}
+	else
+	{
 		a -= amount;
 		if (a < b)
 			return b;
@@ -17,10 +20,12 @@ function try_solid(xoffset, yoffset, object, iterations)
 	var old_x = x;
 	var old_y = y;
 	var n = -1;
-	for (var i = 0; i < iterations; i++) {
+	for (var i = 0; i < iterations; i++)
+	{
 		x += xoffset;
 		y += yoffset;
-		if (!scr_solid(x, y)) {
+		if (!scr_solid(x, y))
+		{
 			n = i + 1;
 			break;
 		}
@@ -36,10 +41,12 @@ function ledge_bump(iterations)
 	x += (xscale * 4);
 	var ty = try_solid(0, -1, obj_solid, iterations);
 	x = old_x;
-	if (ty != -1) {
+	if (ty != -1)
+	{
 		y -= ty;
 		x += xscale;
-		if (scr_solid(x, y)) {
+		if (scr_solid(x, y))
+		{
 			x = old_x;
 			y = old_y;
 			return true;

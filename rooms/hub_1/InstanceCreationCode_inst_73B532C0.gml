@@ -1,1 +1,0 @@
-targetRoom=junkbeach_1

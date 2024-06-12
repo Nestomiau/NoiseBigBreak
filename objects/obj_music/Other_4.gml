@@ -1,2 +1,0 @@
-live_auto_call
-scr_music_playSong(room)
