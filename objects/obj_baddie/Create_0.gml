@@ -6,6 +6,7 @@ hsp=0
 vsp_carry=0
 hsp_carry=0
 image_speed=.4
+depth=-2
 spr_idle=spr_player_idle
 spr_scared=spr_player_hurt
 spr_dead=spr_player_dies
